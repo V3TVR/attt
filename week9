@@ -17,9 +17,6 @@ for(int i = 0; i< m.size(); i++) {
 String s = m.get(i).getText(); 
 System.out.println("Text is: " + s); 
 } 
-11 
-12 
- 
  
  } 
  }
