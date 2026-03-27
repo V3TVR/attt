@@ -20,7 +20,7 @@ surName.sendKeys("kamatam");
 Thread.sleep(500); 
 WebElement mobileNoOrEmailId= driver.findElement(By.name("reg_email__")); 
 mobileNoOrEmailId.sendKeys("1234567890"); 
-3 
+
 Thread.sleep(500); 
 WebElement password = driver.findElement(By.name("reg_passwd__")); 
 password.sendKeys("123ashu"); 
@@ -58,9 +58,7 @@ WebDriver driver=new ChromeDriver();
 driver.get("https://www.facebook.com/"); 
 Thread.sleep(200); 
 WebElement createAccount=driver.findElement(By.xpath("(//a[normalize
-space()='Create new account'])[1]")); 
-4 
-5 
+space()='Create new account'])[1]"));
  
   createAccount.click(); 
   Thread.sleep(500); 
