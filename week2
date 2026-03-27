@@ -32,7 +32,6 @@ Thread.sleep(2000);
 WebElement setPassword = driver.findElement(By.id("acc_user_password")); 
 setPassword.sendKeys("12345"); 
 Thread.sleep(2000); 
-2 
 WebElement confirmPassword = driver.findElement(By.id("acc_user_passconf")); 
 confirmPassword.sendKeys("12345"); 
 Thread.sleep(2000); 
