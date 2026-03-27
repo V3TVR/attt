@@ -27,8 +27,7 @@ personal use'])[1]"));
   WebElement bn1 = driver.findElement(By.xpath("(//span[normalize-space()='Next'])")); 
   bn1.click(); 
   Thread.sleep(3000); 
-    Select month = new Select(driver.findElement(By.xpath("(//select[@id='month'])[1]"))); 
-13 
+    Select month = new Select(driver.findElement(By.xpath("(//select[@id='month'])[1]")));
  
     month.selectByValue("8"); 
     Thread.sleep(2000); 
