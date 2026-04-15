@@ -1,47 +1,43 @@
-import java.awt.AWTException; 
-import java.awt.Robot; 
-import java.awt.event.KeyEvent; 
-import org.openqa.selenium.By; 
-import org.openqa.selenium.Keys; 
-import org.openqa.selenium.WebDriver; 
-import org.openqa.selenium.WebElement; 
-import org.openqa.selenium.chrome.ChromeDriver; 
-import org.openqa.selenium.interactions.Actions; 
-public class Image { 
-public static void main(String[] args)  throws InterruptedException, AWTException { 
-WebDriver driver=new ChromeDriver(); 
-driver.manage().window().maximize(); 
-driver.get("https://www.google.com"); 
-Thread.sleep(2000); 
-WebElement searchBar=driver.findElement(By.name("q")); 
-searchBar.sendKeys("cmrit hyderabad"); 
-searchBar.sendKeys(Keys.ENTER); 
-Thread.sleep(15000); 
-WebElement img=driver.findElement(By.xpath("//a[normalize-space()='Images']")); 
-img.click(); 
-WebElement img1=driver.findElement(By.xpath("//img[@alt='CMR Institute of Technology, 
-Hyderabad Courses & Fees 2023']")); 
-Actions action = new Actions(driver); 
-action.contextClick(img1).build().perform(); 
-Robot robot=new Robot(); 
-robot.keyPress(KeyEvent.VK_DOWN); 
-Thread.sleep(2000); 
-robot.keyPress(KeyEvent.VK_DOWN); 
-Thread.sleep(2000); 
-robot.keyPress(KeyEvent.VK_DOWN); 
-Thread.sleep(2000); 
-robot.keyPress(KeyEvent.VK_DOWN); 
-Thread.sleep(2000); 
-robot.keyPress(KeyEvent.VK_DOWN); 
-Thread.sleep(2000); 
-robot.keyPress(KeyEvent.VK_DOWN); 
-Thread.sleep(2000); 
-robot.keyPress(KeyEvent.VK_DOWN); 
-Thread.sleep(2000); 
-robot.keyPress(KeyEvent.VK_ENTER); 
-Thread.sleep(3000); 
-robot.keyPress(KeyEvent.VK_ENTER); 
-System.out.println("downloaded"); 
-// driver.close(); 
-} 
-} 
+package week8;  
+  
+import java.awt.AWTException;  
+import java.awt.Robot;  
+import java.awt.event.KeyEvent;  
+  
+import org.openqa.selenium.By;  
+import org.openqa.selenium.WebElement;  
+import org.openqa.selenium.chrome.ChromeDriver;  
+import org.openqa.selenium.interactions.Actions;  
+  
+;  
+  
+public class Week8 {  
+  
+public static void main(String[] args) throws InterruptedException, AWTException {  
+System.setProperty("webdiver.chrome.driver", 
+"E:\\6712\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");  
+      ChromeDriver driver=new ChromeDriver();  
+      driver.manage().window().maximize();  
+      driver.get("https://duckduckgo.com/");  
+      driver.findElement(By.name("q")).sendKeys("cmrithyderabd\n");  
+      driver.findElement(By.xpath("//a[text()=’Images’]")).click();  
+      Thread.sleep(2000);  
+      WebElement img=driver.findElement(By.xpath("//img[@alt=’CMR Institute of Technology | Top 
+Engineering College in Hyderabad’]"));  
+       Actions action = new Actions(driver);  
+action.contextClick(img).build().perform();  
+Robot robot = new Robot();  
+robot.keyPress(KeyEvent.VK_DOWN);  
+Thread.sleep(2000);  
+robot.keyPress(KeyEvent.VK_DOWN);  
+Thread.sleep(2000);  
+robot.keyPress(KeyEvent.VK_ENTER);  
+robot.keyRelease(KeyEvent.VK_ENTER);  
+Thread.sleep(2000);  
+robot.keyPress(KeyEvent.VK_ENTER);  
+robot.keyRelease(KeyEvent.VK_ENTER);  
+  
+}  
+  
+  
+}  
