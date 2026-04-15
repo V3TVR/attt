@@ -24,29 +24,25 @@ submit.click();
 
 
 
-Week 5a  
-  
-package week_5a;  
-  
-import org.openqa.selenium.By;  
-import org.openqa.selenium.chrome.ChromeDriver;  
-  
-public class Week_5a {  
-  
-public static void main(String[] args)throws InterruptedException {  
-System.setProperty("webdriver.chrome.driver","E:\\ATT-J9\\chromedriver-win64\\chromedriver.exe");  
-ChromeDriver driver = new ChromeDriver();  
-driver.manage().window().maximize();  
-driver.get("https://cmrithyderabad.edu.in/");  
-driver.findElement(By.xpath("//button[@id=’closePopup’]")).click();  
-driver.findElement(By.xpath("(//a[text()=’ACADEMICS’])[1]")).click();  
-driver.findElement(By.xpath("(//a[text()=’SYLLABUS’])[1]")).click();  
-driver.findElement(By.xpath("(//a[text()=’B.Tech Syllabus’])[1]")).click();  
-//driver.findElement(By.xpath("//a[text()=’B.Tech. Computer Science and Engineering (AI&ML)’]")).click();  
-driver.findElement(By.xpath("//a[text()=’ Computer Science and Engineering ’]")).click();  
-Thread.sleep(15000);  
-driver.quit();  
-}  
-  
-}  
-  
+package week5;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class week5 {
+
+	public static void main(String[] args) throws InterruptedException {
+		ChromeDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://duckduckgo.com/");
+		driver.findElement(By.name("q")).sendKeys("cmrithyderabad\n");
+		driver.findElement(By.xpath("//span[normalize-space()='CMR Institute Of Technology - Top Engineering Colleges in Hyderabad']")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//button[@id='closePopup']")).click();
+		driver.findElement(By.xpath("//a[text()='ACADEMICS']")).click();
+		driver.findElement(By.xpath("//a[text()='SYLLABUS']")).click();
+		driver.findElement(By.xpath("//a[normalize-space()='B.Tech Syllabus']")).click();
+		driver.findElement(By.xpath("//a[normalize-space()='B.Tech. Computer Science and Engineering (Data Science)']")).click();
+	}
+
+}
